@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="GönülVakti gizlilik politikası: konum, yerel kayıtlar, Kur’an dinleme, reklam tercihleri ve verilerin silinmesi. Türkçe, English, العربية.">
 <title>GönülVakti Gizlilik Politikası</title>
-<meta name="description" content="GönülVakti uygulamasının gizlilik politikası: hangi veriler işlenir, nereye gönderilir, nasıl silinir.">
 <style>
   :root {
     --bg: #fbf8f1;
@@ -64,226 +64,269 @@
   th { font-weight: 700; border-bottom: 2px solid var(--gold); }
   mark { background: var(--mark); color: inherit; padding: 0 .25em; border-radius: 3px; }
   footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .92rem; }
-  /* Dil seçimi: varsayılan Türkçe, #en ile İngilizce */
-  #en { display: none; }
-  #en:target { display: block; }
-  body:has(#en:target) #tr { display: none; }
-  @media print { .lang { display: none; } }
+
+  .lang { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .8rem; }
+  .lang a, .lang strong { margin: 0; }
+  .lang strong { color: var(--ink); }
+  main[dir="rtl"] { text-align: right; direction: rtl; font-family: system-ui, Tahoma, Arial, sans-serif; }
+  main[dir="rtl"] ul { padding-left: 0; padding-right: 1.2rem; }
+  main[dir="rtl"] .summary { border-left: 0; border-right: 4px solid var(--gold); border-radius: 6px 0 0 6px; }
+  main[dir="rtl"] th, main[dir="rtl"] td { text-align: right; }
+  main[dir="rtl"] .tablewrap { direction: rtl; }
+  .bidi { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+  .important { border-top: 1px solid var(--rule); margin-top: 1rem; padding-top: .55rem; }
+  @media (max-width: 520px) {
+    body { font-size: 16px; }
+    .wrap { padding: 1.5rem 1rem 3rem; }
+    h1 { font-size: 1.78rem; }
+    h2 { font-size: 1.23rem; }
+    table { min-width: 33rem; }
+  }
+  @media print { .lang { display:none; } main[hidden] { display:none !important; } }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<!-- ======================= TÜRKÇE ======================= -->
-<main id="tr">
-  <header>
-    <h1>GönülVakti Gizlilik Politikası</h1>
-    <p class="meta">Son güncelleme: 31 Ekim 2026</p>
-    <p class="lang"><strong>Türkçe</strong> · <a href="#en" hreflang="en">English</a></p>
-  </header>
+<main id="tr" lang="tr" data-language="tr">
+<header><h1>GönülVakti Gizlilik Politikası</h1><p class="meta">Son güncelleme: 21 Kasım 2026</p><nav class="lang" aria-label="Language / Dil / اللغة"><strong aria-current="page">Türkçe</strong> <span aria-hidden="true">·</span> <a href="#en" hreflang="en" lang="en">English</a> <span aria-hidden="true">·</span> <a href="#ar" hreflang="ar" lang="ar">العربية</a></nav></header>
 
-  <div class="summary">
-    <p>Kısaca</p>
-    <ul>
-      <li>Hesap açmanız gerekmez. Adınızı, e-posta adresinizi ya da telefon numaranızı istemeyiz.</li>
-      <li>Kendi sunucumuzda kullanıcı verisi toplamayız ve saklamayız. Tercihleriniz, favorileriniz, zikir ve ibadet kayıtlarınız yalnızca telefonunuzda durur.</li>
-      <li>Konum izni isteğe bağlıdır. Konum; namaz vakitlerini, kıble yönünü ve yakındaki camileri göstermek için kullanılır.</li>
-      <li>Bazı özellikler üçüncü taraf hizmetlere istek gönderir: namaz vakitleri, harita, cami arama, sesli Kur’an dinleme ve reklamlar. Ayrıntılar aşağıdadır.</li>
-      <li>Uygulamada Google AdMob reklamları gösterilir; Google reklam ve cihaz verilerini işleyebilir.</li>
-    </ul>
-  </div>
-
-  <h2>Kimiz</h2>
-  <p>GönülVakti, Fatih Levent tarafından geliştirilen bir Android uygulamasıdır. Bu metinde "biz" geliştiriciyi, "uygulama" GönülVakti'yi anlatır. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) bakımından veri sorumlusu Fatih Levent'tir. İletişim: <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a></p>
-
-  <h2>Telefonunuzda saklanan veriler</h2>
-  <p>Aşağıdaki veriler yalnızca cihazınızda tutulur ve bize gönderilmez:</p>
-  <ul>
-    <li>Seçtiğiniz şehir ve kayıtlı şehirleriniz; dil, tema, bildirim ve hesaplama tercihleriniz</li>
-    <li>İsterseniz profilde yazdığınız ad</li>
-    <li>Favori ayetler ve dualar, son okuduğunuz yer; sesli Kur’an için favori sureler ve seçilen hafız</li>
-    <li>Zikir sayaçları ve geçmişi, ibadet takibi kayıtları</li>
-    <li>Vaktin Mesajı ayarları ve kaydettiğiniz mesajlar</li>
-    <li>Yakındaki camilerin son arama sonucu (daha hızlı açılması için önbellek)</li>
-  </ul>
-  <p>Bu bilgiler uygulamanın yerel depolama alanında tutulur. Uygulama, Android otomatik yedeklemesine dahil edilmez.</p>
-
-  <h2>Konum</h2>
-  <p>Uygulama yaklaşık ve kesin konum izni isteyebilir. İzin verirseniz konumunuz şunlar için kullanılır:</p>
-  <ul>
-    <li>Bulunduğunuz şehri belirlemek ve namaz vakitlerini hesaplatmak</li>
-    <li>Kıble yönünü göstermek</li>
-    <li>Yakınınızdaki camileri bulmak</li>
-  </ul>
-  <p>Konum yalnızca uygulamayı kullanırken alınır. Arka planda konum izni istemeyiz. İzni vermezseniz şehrinizi elle seçebilirsiniz. Yakındaki camileri bulma özelliği konuma ihtiyaç duyar. İzni Android ayarlarından istediğiniz zaman kapatabilirsiniz.</p>
-
-  <h2>Üçüncü taraf hizmetler ve gönderilen veriler</h2>
-  <p>Aşağıdaki hizmetlerin sunucuları Türkiye dışında olabilir. Bu hizmetler, isteği aldıkları için IP adresinizi teknik olarak görür. Her biri kendi gizlilik politikasına tabidir.</p>
-  <div class="tablewrap">
-    <table>
-      <thead>
-        <tr><th>Hizmet</th><th>Ne için</th><th>Gönderilen veri</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Aladhan API<br>(api.aladhan.com)</td><td>Namaz vakitlerini hesaplamak</td><td>Şehrinizin enlem ve boylamı, hesaplama yöntemi, ikindi tercihi</td></tr>
-        <tr><td>Android Geocoder<br>(cihazınızın adres servisi; çoğu telefonda Google)</td><td>Konumdan şehir adı bulmak, yazdığınız şehri aramak</td><td>Koordinatlarınız ya da yazdığınız şehir adı</td></tr>
-        <tr><td>OpenStreetMap Nominatim<br>(nominatim.openstreetmap.org)</td><td>Konumdan şehir adı bulmak, şehir aramak, yakındaki camileri aramak</td><td>Koordinatlarınız ya da yazdığınız şehir adı; arama yapılan bölge</td></tr>
-        <tr><td>Overpass API<br>(overpass-api.de ve benzeri herkese açık OpenStreetMap sunucuları)</td><td>Yakındaki camileri listelemek</td><td>Arama yapılan bölgenin koordinatları</td></tr>
-        <tr><td>OpenStreetMap harita karoları<br>(tile.openstreetmap.org)</td><td>Cami haritasını göstermek</td><td>Görüntülediğiniz harita bölgesi</td></tr>
-        <tr><td>OpenStreetMap harita sayfası<br>(www.openstreetmap.org)</td><td>Konumunuzu haritada göstermek</td><td>Görüntülenen koordinatlar ve IP adresi</td></tr>
-        <tr><td>MP3Quran / ses dosyası sunucuları<br>(mp3quran.net ve yönlendirdiği adresler)</td><td>Seçilen hafızın Kur’an kıraatini internet üzerinden dinletmek</td><td>IP adresi, istenen ses dosyası ve teknik bağlantı bilgileri sunucu tarafından görülebilir</td></tr>
-        <tr><td>Google AdMob</td><td>Reklam göstermek</td><td>Reklam kimliği, IP adresi, cihaz ve uygulama bilgileri (Google tarafından işlenebilir)</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>Konum bilgisi yurt dışındaki bu hizmetlere iletilebilir. Android konum izni, kişisel verilerin yurt dışına aktarımı için tek başına KVKK kapsamında açık rıza anlamına gelmez. İlgili veri aktarımı için gerekli hukuki şartlar ayrıca değerlendirilir. Konum iznini Android ayarlarından istediğiniz zaman kapatabilirsiniz.</p>
-
-  <h2>Sesli Kur’an</h2>
-  <p>Kur’an kıraatleri MP3Quran tarafından sağlanan ses dosyası bağlantıları üzerinden oynatılır. Ses sunucuları isteğinizi işlerken IP adresinizi, istenen dosyayı ve bağlantı bilgilerini görebilir. Seçilen hafız ve favori sureler cihazınızdaki uygulama alanında saklanır. Ses dosyaları internet bağlantısı gerektirir.</p>
-
-  <h2>Reklamlar</h2>
-  <p>Uygulamada Google AdMob reklamları gösterilir. Google, reklam göstermek, ölçmek ve kötüye kullanımı önlemek için reklam kimliği gibi cihaz tanımlayıcıları ve IP adresi toplayabilir; IP adresinizden yaklaşık konumunuzu çıkarabilir. Ayrıntılar için <a href="https://policies.google.com/privacy" rel="noopener">Google Gizlilik Politikası</a>'na bakabilirsiniz.</p>
-  <p>Reklam kişiselleştirmesini ve reklam kimliğinizi Android'de <em>Ayarlar → Google → Reklamlar</em> bölümünden yönetebilirsiniz.</p>
-  <p>Uygulamamız favorilerinizi, zikir ve ibadet kayıtlarınızı reklam hedeflemesi amacıyla reklam ağına bilerek göndermez. Dinî alışkanlıklarınızı reklam hedeflemesi için kullanmayız.</p>
-
-  <h2>İzinler</h2>
-  <ul>
-    <li><strong>Konum</strong> (isteğe bağlı): yukarıda anlatılan amaçlar için.</li>
-    <li><strong>Bildirimler</strong>: namaz vakti ve hatırlatma bildirimleri için.</li>
-    <li><strong>Tam zamanlı alarm</strong>: bildirimlerin vaktinde gelmesi için.</li>
-    <li><strong>Ön plan hizmeti</strong>: bildirim çubuğundaki canlı geri sayım ve sesli Kur’an oynatımının arka planda sürmesi için.</li>
-    <li><strong>Açılışta başlatma</strong>: telefon yeniden başladığında alarmları yeniden kurmak için.</li>
-    <li><strong>Ağ durumu ve cihazı uyanık tutma</strong>: internet bağlantısını kontrol etmek, alarm ve ses oynatmanın kesintisiz çalışması için.</li>
-    <li><strong>Titreşim ve internet</strong>: bildirimler ve yukarıdaki hizmetlere bağlanmak için.</li>
-  </ul>
-
-  <h2>Haklarınız</h2>
-  <p>KVKK'nın 11. maddesi uyarınca; verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi isteme, düzeltilmesini ve silinmesini isteme, işlemeye itiraz etme haklarına sahipsiniz. Kendi sunucumuzda veriniz tutulmadığı için verilerinizin çoğu cihazınızdadır ve onları aşağıdaki yoldan kendiniz silebilirsiniz. Başka bir talebiniz için <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a> adresine yazabilirsiniz. Üçüncü taraf hizmetlerdeki veriler için ilgili hizmetin politikasına başvurmanız gerekir. Ayrıca Kişisel Verileri Koruma Kurumu'na başvurma hakkınız saklıdır.</p>
-  <p>Avrupa Ekonomik Alanı, Birleşik Krallık veya İsviçre'de bulunuyorsanız GDPR kapsamındaki haklarınız da (erişim, düzeltme, silme, işlemeyi kısıtlama, itiraz, veri taşınabilirliği ve yerel veri koruma kuruluna şikâyet) saklıdır. Konum iznini Android ayarlarından geri çekebilirsiniz. Konum verilerinin işlenmesi ve olası yurt dışı aktarımı için geçerli hukuki dayanak ayrıca değerlendirilir.</p>
-
-  <h2>Verilerinizi silme</h2>
-  <p>Uygulamadaki <strong>Verilerimi Sil</strong> düğmesi tercihlerinizi, favorilerinizi, zikir ve ibadet kayıtlarınızı, kayıtlı şehirlerinizi ve Vaktin Mesajı kayıtlarınızı siler. Cami arama önbelleği gibi diğer yerel dosyalar dahil tüm yerel verileri kaldırmak için Android <em>Ayarlar → Uygulamalar → GönülVakti → Depolama → Verileri temizle</em> seçeneğini kullanabilirsiniz. Uygulamayı kaldırmak cihazdaki uygulama verilerini siler. Üçüncü taraf hizmetlerin kendi kayıtları bu düğmeyle silinmez.</p>
-
-  <h2>Çocuklar</h2>
-  <p>Uygulama çocuklara yönelik değildir ve çocuklardan bilerek veri toplamayız.</p>
-
-  <h2>Güvenlik</h2>
-  <p>Üçüncü taraf hizmetlere şifreli (HTTPS) bağlantıyla istek gönderilir. Hiçbir yöntem tamamen güvenli olmasa da verilerinizi korumak için makul önlemleri uygularız.</p>
-
-  <h2>Değişiklikler</h2>
-  <p>Bu politikayı güncellersek yukarıdaki tarihi değiştiririz. Önemli değişiklikleri uygulama içinde de duyururuz.</p>
-
-  <h2>İletişim</h2>
-  <p>Fatih Levent · <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a></p>
-
-  <footer>GönülVakti · Gizlilik Politikası · 31 Ekim 2026</footer>
-</main>
-
-<!-- ======================= ENGLISH ======================= -->
-<main id="en" lang="en">
-  <header>
-    <h1>GönülVakti Privacy Policy</h1>
-    <p class="meta">Last updated: October 31, 2026</p>
-    <p class="lang"><a href="#tr" hreflang="tr">Türkçe</a> · <strong>English</strong></p>
-  </header>
-
-  <div class="summary">
-    <p>In short</p>
-    <ul>
-      <li>No account is needed. We don't ask for your name, email or phone number.</li>
-      <li>We don't collect or store user data on our own servers. Your preferences, favorites, dhikr and worship records stay on your phone.</li>
-      <li>Location permission is optional. Location is used to show prayer times, the Qibla direction and nearby mosques.</li>
-      <li>Some features connect to third-party services for prayer times, maps, mosque searches, Quran audio streaming and advertisements. Details are listed below.</li>
-      <li>The app shows Google AdMob ads; Google may process advertising and device data.</li>
-    </ul>
-  </div>
-
-  <h2>Who we are</h2>
-  <p>GönülVakti is an Android app developed by Fatih Levent. Contact: <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a></p>
-
-  <h2>Data stored on your phone</h2>
-  <p>The following stays on your device and is not sent to us:</p>
-  <ul>
-    <li>Your selected and saved cities; language, theme, notification and calculation preferences</li>
-    <li>A name, if you choose to enter one in your profile</li>
-    <li>Favorite verses and duas, your last read position; favorite surahs and selected reciter for Quran audio</li>
-    <li>Dhikr counters and history, worship tracking records</li>
-    <li>Message of the Moment settings and saved messages</li>
-    <li>The last nearby-mosque search result (a cache so the screen opens faster)</li>
-  </ul>
-  <p>These details are stored in the app’s local storage. The app is excluded from Android automatic backup.</p>
-
-  <h2>Location</h2>
-  <p>The app may ask for approximate and precise location permission. If you allow it, your location is used to:</p>
-  <ul>
-    <li>Determine your city and calculate prayer times</li>
-    <li>Show the Qibla direction</li>
-    <li>Find mosques near you</li>
-  </ul>
-  <p>Location is read only while you are using the app. We do not request background location. If you decline, you can choose your city manually. The nearby-mosque feature needs your location. You can turn the permission off in Android settings at any time.</p>
-
-  <h2>Third-party services and what is sent</h2>
-  <p>These services may run servers outside Türkiye. Each of them technically sees your IP address because it receives the request, and each is governed by its own privacy policy.</p>
-  <div class="tablewrap">
-    <table>
-      <thead>
-        <tr><th>Service</th><th>Purpose</th><th>Data sent</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Aladhan API<br>(api.aladhan.com)</td><td>Calculating prayer times</td><td>Latitude and longitude of your city, calculation method, Asr preference</td></tr>
-        <tr><td>Android Geocoder<br>(your device's address service; on most phones provided by Google)</td><td>Finding a city name from coordinates, searching the city you type</td><td>Your coordinates or the city name you type</td></tr>
-        <tr><td>OpenStreetMap Nominatim<br>(nominatim.openstreetmap.org)</td><td>Finding a city name from coordinates, searching cities, searching nearby mosques</td><td>Your coordinates or the city name you type; the searched area</td></tr>
-        <tr><td>Overpass API<br>(overpass-api.de and similar public OpenStreetMap servers)</td><td>Listing nearby mosques</td><td>Coordinates of the searched area</td></tr>
-        <tr><td>OpenStreetMap map tiles<br>(tile.openstreetmap.org)</td><td>Showing the mosque map</td><td>The map area you view</td></tr>
-        <tr><td>OpenStreetMap map page<br>(www.openstreetmap.org)</td><td>Showing your location on a map</td><td>Displayed coordinates and your IP address</td></tr>
-        <tr><td>MP3Quran / audio hosting servers<br>(mp3quran.net and linked hosts)</td><td>Streaming Quran recitations from the chosen reciter</td><td>The server may receive your IP address, requested audio file and technical connection information</td></tr>
-        <tr><td>Google AdMob</td><td>Showing ads</td><td>Advertising ID, IP address, device and app details (may be processed by Google)</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>Location data may be transferred to these services abroad. Granting Android location permission does not, by itself, constitute valid consent to an international data transfer under applicable data protection laws. The appropriate legal basis and safeguards for any transfer must be assessed separately. You can revoke location permission in Android settings at any time.</p>
-
-  <h2>Quran audio</h2>
-  <p>Quran recitations are streamed from audio links provided by MP3Quran. The audio hosts may receive your IP address, requested file and technical connection details. Your selected reciter and favorite surahs are stored locally by the app. Audio playback requires an internet connection.</p>
-
-  <h2>Ads</h2>
-  <p>The app shows Google AdMob ads. Google may collect device identifiers such as the advertising ID and your IP address to serve and measure ads and prevent abuse, and may infer approximate location from your IP address. See the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> for details.</p>
-  <p>You can manage ad personalization and your advertising ID in Android under <em>Settings → Google → Ads</em>.</p>
-  <p>The app does not intentionally pass your favorites, dhikr or worship records to the ad network for ad targeting, and we do not use your religious habits for ad targeting.</p>
-
-  <h2>Permissions</h2>
-  <ul>
-    <li><strong>Location</strong> (optional): for the purposes above.</li>
-    <li><strong>Notifications</strong>: prayer-time and reminder notifications.</li>
-    <li><strong>Exact alarms</strong>: so notifications arrive on time.</li>
-    <li><strong>Foreground service</strong>: for the live countdown in the notification shade and continued Quran audio playback in the background.</li>
-    <li><strong>Run at startup</strong>: to reschedule alarms after the phone restarts.</li>
-    <li><strong>Network state and keeping the device awake</strong>: to check the internet connection and keep alarms and audio playback running smoothly.</li>
-    <li><strong>Vibration and internet</strong>: for notifications and to reach the services above.</li>
-  </ul>
-
-  <h2>Your rights</h2>
-  <p>You can ask whether your data is processed, request information, ask for correction or deletion, and object to processing. Because we hold no data on our own servers, most of your data is on your device and you can delete it yourself as described below. For any other request, write to <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a>. For data held by third-party services, please contact them under their own policies.</p>
-  <p>If you are in the European Economic Area, the United Kingdom or Switzerland, you also have your GDPR rights (access, rectification, erasure, restriction, objection, portability, and the right to complain to your local data protection authority). You can revoke location permission in Android settings. The applicable legal basis for processing location data and any international transfer must be assessed separately.</p>
-
-  <h2>Deleting your data</h2>
-  <p>The in-app <strong>Delete my data</strong> button removes your preferences, favorites, dhikr and worship records, saved cities and Message of the Moment records. To remove all local data, including other local files such as the mosque search cache, use Android <em>Settings → Apps → GönülVakti → Storage → Clear data</em>. Uninstalling the app removes the app data on your device. This button does not delete records held independently by third-party providers.</p>
-
-  <h2>Children</h2>
-  <p>The app is not directed at children and we do not knowingly collect data from children.</p>
-
-  <h2>Security</h2>
-  <p>Requests to third-party services use encrypted (HTTPS) connections. No method is completely secure, but we apply reasonable measures to protect your data.</p>
-
-  <h2>Changes</h2>
-  <p>If we update this policy we will change the date above and announce significant changes in the app.</p>
-
-  <h2>Contact</h2>
-  <p>Fatih Levent · <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a></p>
-
-  <footer>GönülVakti · Privacy Policy · October 31, 2026</footer>
-</main>
-
+<div class="summary">
+<p>Kısaca</p>
+<ul>
+<li>Hesap açmak gerekmez. Profilinize isterseniz bir ad yazabilirsiniz; ilk harfi profil simgesinde gösterilir. E-posta ve telefon numarasıyla kayıt zorunlu değildir.</li>
+<li>Favoriler, zikir ve ibadet kayıtları, hatim ilerlemesi ve dinleme tercihleri uygulamanın cihazdaki yerel alanında saklanır. Kullanıcı hesabı tutan bir sunucumuz yoktur.</li>
+<li>Konum izni isteğe bağlıdır. Namaz vakitleri, kıble ve yakın camiler için kullanılır; bazı işlemlerde üçüncü taraf hizmetlere koordinat gönderilir.</li>
+<li>MP3Quran, harita/konum servisleri ve Google AdMob gibi üçüncü taraflar teknik bağlantı ve cihaz bilgilerini işleyebilir.</li>
+<li>Uygulama içinden <strong>Verilerimi Sil</strong> seçeneğiyle yerel uygulama verilerinizi sıfırlayabilirsiniz.</li>
+</ul>
 </div>
+<h2>1. Biz kimiz?</h2>
+<p>GönülVakti, Fatih Levent tarafından geliştirilen bir Android uygulamasıdır. Bu politikada “biz” geliştiriciyi, “uygulama” GönülVakti'ni ifade eder. Türkiye'deki 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında uygulamanın veri işleme faaliyetleriyle ilgili başvurularınızı <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a> adresine iletebilirsiniz.</p>
+<h2>2. Telefonda saklanan bilgiler</h2>
+<p>Aşağıdaki bilgiler uygulamanın yerel depolama alanında tutulur; bunlar için kendi sunucumuzda bir kullanıcı profili oluşturmuyoruz:</p>
+<ul>
+<li>Seçilen ve kaydedilen şehirler, konuma bağlı şehir/koordinat bilgileri; dil, tema, namaz vakti hesaplama ve bildirim tercihleri.</li>
+<li>Profilde isteğe bağlı girilen ad (profil simgesinde ilk harfin gösterilmesi için).</li>
+<li>Favori ayetler ve diğer kaydedilen içerikler, Kur’an'da son okunan yer.</li>
+<li>Zikirmatik sayıları ve geçmişi, günlük namaz/ibadet ve kaza takibi kayıtları.</li>
+<li><strong>Hatim Yolculuğum</strong> kapsamında tamamlanan cüzler, okuma ilerlemesi, hedef ve geçmiş kayıtları.</li>
+<li>Sesli Kur’an dinleme listesi, ses dosyası bağlantıları, sure/hafız bilgileri, son dinlenen öğe ve kaldığınız saniye.</li>
+<li>Vaktin Mesajı için kaydedilen mesajlar, gösterim geçmişi ve bildirim zamanları/tercihleri.</li>
+<li>Namaz vakti takvimi önbelleği; cami araması için son arama bölgesi, koordinatlar, zaman ve cami sonuçları.</li>
+</ul>
+<p>Bu kayıtlar siz silene, uygulama verilerini temizleyene veya uygulamayı kaldırana kadar cihazınızda kalabilir. Uygulamada kullanıcıya sunulan bir yedekleme/geri yükleme özelliği bulunmaz. Android manifestinde otomatik yedeklemeyi kapatma ayarı vardır; ancak Android sürümüne ve cihaz üreticisine göre <strong>cihazdan cihaza veri aktarımı</strong> farklı davranabilir.</p>
+<h2>3. Konum bilgilerinin kullanımı</h2>
+<p>Uygulama yaklaşık veya kesin konum izni isteyebilir. İzin verildiğinde mevcut konum, şehir adını bulmak, namaz vakitlerini belirlemek, kıble yönünü hesaplamak ve yakın camileri aramak için kullanılabilir. Konuma erişmek için Android'in konum hizmetleri kullanılır.</p>
+<p>Uygulama <strong>arka plan konum izni</strong> istemez ve sürekli konum takibi yapmak için tasarlanmamıştır. Ancak kullanıcı tarafından seçilen veya önceden belirlenen konum bilgileriyle namaz vakti yenilemesi ya da cami sonuçlarının önceden hazırlanması gibi ağ işlemleri gerçekleşebilir. Konum izni vermek istemezseniz şehrinizi elle seçebilirsiniz; bazı konuma dayalı özellikler sınırlanabilir. İzni Android ayarlarından kaldırabilirsiniz.</p>
+<h2>4. Üçüncü taraf hizmetler</h2>
+<p>İlgili özelliği kullandığınızda aşağıdaki sağlayıcılara ağ isteği gönderilebilir. Sunucular istek nedeniyle IP adresini ve teknik bağlantı kayıtlarını görebilir. Sağlayıcıların sunucuları Türkiye dışında bulunabilir.</p>
+<div class="tablewrap"><table><thead><tr><th>Hizmet</th><th>Amaç</th><th>Paylaşılabilen / görülebilen bilgiler</th></tr></thead><tbody>
+<tr><td>Aladhan API<br><span class="bidi">api.aladhan.com</span></td><td>Namaz vakti takvimi</td><td>Şehir veya konumun enlem-boylamı, hesaplama yöntemi, ikindi tercihi, istek ve IP bilgisi.</td></tr>
+<tr><td>Android Geocoder</td><td>Koordinattan şehir adı bulma ve şehir arama</td><td>Cihazın adres hizmeti sağlayıcısına bağlı olarak koordinatlar veya aranan şehir metni.</td></tr>
+<tr><td>OpenStreetMap Nominatim<br><span class="bidi">nominatim.openstreetmap.org</span></td><td>Şehir/adres arama, ters coğrafi kodlama, cami arama</td><td>Koordinatlar, şehir araması, arama alanı sınırları ve bağlantı bilgileri.</td></tr>
+<tr><td>Overpass API<br>(çeşitli herkese açık sunucular)</td><td>Yakındaki camileri arama</td><td>Arama merkezi koordinatları, yarıçap, sorgu ve bağlantı bilgileri.</td></tr>
+<tr><td>OpenStreetMap harita hizmetleri</td><td>Cami ve harita görünümü</td><td>Görüntülenen harita bölgesi/karoları ve teknik bağlantı bilgileri; harita sayfası açılırsa ilgili koordinatlar.</td></tr>
+<tr><td>MP3Quran<br><span class="bidi">mp3quran.net</span> ve ses sunucuları</td><td>Sure/hafız listesini alma ve çevrim içi Kur’an dinleme</td><td>İstenen liste veya ses dosyası, IP adresi ve bağlantı bilgileri.</td></tr>
+<tr><td>Google AdMob / UMP</td><td>Reklam gösterimi, reklam gizlilik tercihleri, ölçüm ve kötüye kullanımın önlenmesi</td><td>IP adresi, reklam kimliği ve benzeri cihaz tanımlayıcıları, uygulama etkileşimleri, tanılama bilgileri ve rıza tercihlerinin işlenmesi (duruma bağlı olarak).</td></tr>
+</tbody></table></div>
+<p>Android konum izni, tek başına KVKK kapsamındaki bütün veri işleme veya yurt dışına aktarım koşullarının sağlandığı anlamına gelmez. İlgili işlemler geçerli mevzuata ve hizmet sağlayıcılarının kurallarına tabidir.</p>
+<h2>5. Sesli Kur’an</h2>
+<p>Sure ve hafız bilgileri MP3Quran API'sinden alınır. Seçtiğiniz kıraat, sağlayıcının belirttiği HTTPS ses sunucusundan oynatılır. Sunucu, istediğiniz ses dosyasını ve IP adresinizi görebilir. Dinleme kuyruğunuz, hafız/sure adı ve kaldığınız süre cihazda kaydedilerek kaldığınız yerden devam etmeniz sağlanır. Uygulama kendi sunucusunda dinleme geçmişi oluşturmaz.</p>
+<h2>6. Reklamlar ve gizlilik tercihleri</h2>
+<p>Uygulama Google AdMob reklam altyapısını içerir. Google Mobile Ads SDK; reklam sunumu, ölçüm, güvenlik ve sahteciliği önleme amaçlarıyla IP adresi, uygulama etkileşimleri, tanılama bilgileri ve cihaz/reklam tanımlayıcıları gibi verileri işleyebilir. IP adresinden yaklaşık konum tahmini yapılabilir. Ayrıntılar: <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Gizlilik Politikası</a>.</p>
+<p>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre gibi ilgili bölgelerde, Google'ın User Messaging Platform (UMP) sistemi üzerinden reklam gizlilik mesajı gösterilebilir. <strong>İzin ver</strong>, <strong>İzin vermeyin</strong> ve <strong>Seçenekleri yönet</strong> tercihleri sunulabilir. UMP'nin gerekli gördüğü durumlarda uygulamada <em>Ayarlar → Gizlilik → Reklam Gizlilik Tercihleri</em> bölümünden seçimlerinizi yeniden açabilirsiniz. Bir seçeneği reddetmeniz, her durumda hiç reklam gösterilmeyeceği anlamına gelmez; uygulanabilir kurallar çerçevesinde kişiselleştirilmemiş veya sınırlı reklamlar söz konusu olabilir.</p>
+<p>Android reklam kimliğinizi cihazınızın ayarlar bölümünden de yönetebilirsiniz. GönülVakti, favorilerinizi, hatim, zikir veya ibadet kayıtlarınızı reklam hedeflemesi amacıyla bilerek Google AdMob'a göndermez; dinî alışkanlıklarınızı kendimiz reklam profili oluşturmak için kullanmayız.</p>
+<h2>7. İzinler</h2>
+<ul>
+<li><strong>Konum (yaklaşık/kesin):</strong> şehir, kıble ve yakın camiler; isteğe bağlı.</li>
+<li><strong>Bildirim:</strong> namaz vakti ve hatırlatmaları göndermek.</li>
+<li><strong>Kesin alarm ve yeniden başlatma bildirimi:</strong> vakit bildirimlerini zamanlamak ve cihaz açıldığında yeniden kurmak.</li>
+<li><strong>Ön plan hizmetleri:</strong> sesli Kur’an oynatımı ve bildirim çubuğunda vakit/geri sayım sunmak.</li>
+<li><strong>İnternet ve ağ durumu:</strong> üçüncü taraf içeriklere bağlanmak ve ağ erişimini kontrol etmek.</li>
+<li><strong>Titreşim ve cihazı uyanık tutma:</strong> bildirim ve sesli oynatımın çalışmasını desteklemek.</li>
+</ul>
+<h2>8. Saklama, yedekleme ve silme</h2>
+<p>Yerel kayıtlar, cihazınızdaki uygulama verisi olarak tutulur. <strong>Ayarlar → Gizlilik → Verilerimi Sil</strong> işlemini onayladığınızda Android'in uygulama verilerini temizleme işlevi çağrılır. Bu işlem uygulamanın özel depolama alanındaki tercihleri, veritabanlarını, hatim ve ibadet kayıtlarını, dinleme geçmişini, Vaktin Mesajı kayıtlarını ve önbellekleri temizler; uygulamayı kapatır. Uygulamayı tekrar açtığınızda ilk kurulum ekranı görüntülenir. İşlem geri alınamaz; Android çalışma zamanı izinleri de sıfırlanır.</p>
+<p>Alternatif olarak <em>Android Ayarlar → Uygulamalar → GönülVakti → Depolama → Verileri temizle</em> yolunu kullanabilirsiniz. Bu işlemler ve uygulamayı kaldırmak, bağımsız üçüncü taraf sunucularında önceden oluşmuş kayıtları veya cihaz dışında bulunabilecek yedek/aktarım kopyalarını otomatik olarak silmez.</p>
+<h2>9. Haklarınız ve başvurular</h2>
+<p>KVKK ve uygulanabilir diğer veri koruma mevzuatı kapsamında bilgi alma, erişim, düzeltme, silme ve itiraz etme gibi haklarınız olabilir. Avrupa Ekonomik Alanı, Birleşik Krallık veya İsviçre'deki kullanıcılar, ilgili veri koruma düzenlemeleri kapsamında ek haklara sahip olabilir. İlgili talepler için <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a> adresine yazabilirsiniz. Üçüncü tarafların ayrı tuttuğu bilgiler için ilgili hizmet sağlayıcısına da başvurmanız gerekebilir.</p>
+<p>Bize e-posta gönderirseniz e-posta adresiniz ve mesaj içeriğiniz, talebinizi değerlendirmek ve yanıtlamak amacıyla e-posta hizmeti üzerinden işlenir; bu iletişim, uygulama içinde hesap açıldığı anlamına gelmez.</p>
+<h2>10. Çocukların gizliliği</h2>
+<p>Uygulama özellikle çocukları hedeflemek üzere tasarlanmamıştır. Uygulama içinde hesap açılması veya iletişim bilgisi girilmesi zorunlu değildir. Google AdMob ve diğer üçüncü taraf hizmetlerin veri işleme uygulamaları yukarıda açıklanmıştır. Bir ebeveyn veya yasal temsilci gizlilik konusunda bizimle iletişime geçebilir.</p>
+<h2>11. Güvenlik</h2>
+<p>Yukarıda belirtilen internet hizmetlerine bağlantılar HTTPS kullanır. Cihaz verileri Android'in uygulama depolama alanında tutulur. Bununla birlikte hiçbir teknik yöntem tüm riskleri tamamen ortadan kaldıramaz.</p>
+<h2>12. Değişiklikler</h2>
+<p>Bu politika güncellenirse bu sayfadaki tarih değiştirilir. Önemli değişiklikler uygun olduğunda uygulama veya bu sayfa aracılığıyla bildirilir.</p>
+<h2>13. İletişim</h2>
+<p>Geliştirici: Fatih Levent · <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a></p>
+
+<footer>GönülVakti · Gizlilik Politikası · 21 Kasım 2026</footer></main>
+<main id="en" lang="en" data-language="en" hidden>
+<header><h1>GönülVakti Privacy Policy</h1><p class="meta">Last updated: November 21, 2026</p><nav class="lang" aria-label="Language / Dil / اللغة"><a href="#tr" hreflang="tr" lang="tr">Türkçe</a> <span aria-hidden="true">·</span> <strong aria-current="page">English</strong> <span aria-hidden="true">·</span> <a href="#ar" hreflang="ar" lang="ar">العربية</a></nav></header>
+
+<div class="summary"><p>At a glance</p><ul>
+<li>No account is required. You may enter an optional profile name; its first letter appears in your profile icon. Email and phone registration are not required.</li>
+<li>Favorites, dhikr and worship logs, Khatm progress, and playback preferences are stored locally on your device. We do not run an account-profile server.</li>
+<li>Location permission is optional. Prayer times, Qibla and nearby mosques may use coordinates sent to third-party services.</li>
+<li>MP3Quran, map/location services and Google AdMob may process technical connection and device data.</li>
+<li>You can reset local application data with <strong>Delete My Data</strong> in the app.</li>
+</ul></div>
+<h2>1. Who we are</h2>
+<p>GönülVakti is an Android app developed by Fatih Levent. “We” refers to the developer and “the app” refers to GönülVakti. For privacy requests, contact <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a>.</p>
+<h2>2. Information stored on your device</h2>
+<p>The following information is stored in the app's local storage. We do not create a user profile on our own server for this information:</p>
+<ul>
+<li>Selected and saved cities, location-related city/coordinate information, language, theme, prayer-time calculation and notification settings.</li>
+<li>An optional profile name (its initial is displayed in the profile icon).</li>
+<li>Favorite verses and other saved content, and your last Quran reading position.</li>
+<li>Dhikr counters/history, daily prayer and worship tracking, and missed-prayer records.</li>
+<li><strong>My Khatm Journey:</strong> completed juz, reading progress, targets and historical entries.</li>
+<li>Quran audio queue, audio URLs, surah and reciter information, last played item and playback position.</li>
+<li>Message of the Moment saved items, display history, notification times and preferences.</li>
+<li>Cached prayer calendars and cached nearby-mosque results, including search area, coordinates and time.</li>
+</ul>
+<p>This data may remain until you delete it, clear the app's data, or uninstall the app. No user-facing backup/restore feature is offered. The Android manifest disables automatic backup, but <strong>device-to-device transfer</strong> behavior can vary with Android version and device manufacturer.</p>
+<h2>3. Location</h2>
+<p>The app may request approximate or precise location permission. With permission, your current location can be used to determine your city, obtain prayer times, calculate Qibla direction and search for nearby mosques. Android location services are used to access location.</p>
+<p>The app does <strong>not request background location permission</strong> and is not designed for continuous location tracking. However, network operations such as prayer-time refresh or nearby-mosque prefetch may use an already selected or previously obtained location. You can select a city manually instead of granting location permission, although some location-based functions may be limited. You can revoke permission in Android settings.</p>
+<h2>4. Third-party services</h2>
+<p>When you use the relevant features, network requests may be sent to the providers below. Their servers may see your IP address and technical request details. Servers may be located outside Türkiye.</p>
+<div class="tablewrap"><table><thead><tr><th>Service</th><th>Purpose</th><th>Data potentially sent or visible</th></tr></thead><tbody>
+<tr><td>Aladhan API<br><span class="bidi">api.aladhan.com</span></td><td>Prayer-time calendars</td><td>Latitude/longitude for a city or location, calculation method, Asr setting, request/IP data.</td></tr>
+<tr><td>Android Geocoder</td><td>City search and reverse geocoding</td><td>Depending on the device's geocoding provider, coordinates or city search text.</td></tr>
+<tr><td>OpenStreetMap Nominatim<br><span class="bidi">nominatim.openstreetmap.org</span></td><td>City/address search, reverse geocoding and mosque lookup</td><td>Coordinates, city queries, search-area bounds and connection details.</td></tr>
+<tr><td>Overpass API<br>(multiple public servers)</td><td>Nearby mosque searches</td><td>Search-center coordinates, radius, query and connection details.</td></tr>
+<tr><td>OpenStreetMap map services</td><td>Map and mosque display</td><td>Viewed map area/tiles and technical connection details; map page coordinates if opened.</td></tr>
+<tr><td>MP3Quran<br><span class="bidi">mp3quran.net</span> and audio hosts</td><td>Surah/reciter lists and Quran streaming</td><td>Requested metadata or audio file, IP address and connection details.</td></tr>
+<tr><td>Google AdMob / UMP</td><td>Advertising, privacy choices, measurement and fraud prevention</td><td>IP address, ad and other device identifiers, app interactions, diagnostic data and consent choice handling, as applicable.</td></tr>
+</tbody></table></div>
+<p>Granting Android location permission does not by itself establish that all legal conditions for processing or transferring personal data internationally have been met. Processing remains subject to applicable law and providers' policies.</p>
+<h2>5. Quran audio</h2>
+<p>Surah and reciter metadata comes from the MP3Quran API. Selected recitations stream from HTTPS audio hosts provided by the service. A host can see the requested file and your IP address. Your playback queue, reciter/surah information and last playback position are stored on your device so you can resume listening. We do not create a listening-history profile on our own server.</p>
+<h2>6. Advertising and privacy choices</h2>
+<p>The app integrates Google AdMob. The Google Mobile Ads SDK may process IP addresses, app interactions, diagnostic information and device/advertising identifiers for ad delivery, measurement, security and fraud prevention. IP addresses can be used to infer approximate location. See the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+<p>In relevant regions, including the European Economic Area, United Kingdom and Switzerland, an advertising privacy message may be displayed using Google's User Messaging Platform (UMP). Available choices can include <strong>Consent</strong>, <strong>Do not consent</strong> and <strong>Manage options</strong>. When UMP indicates it is required, you can revisit your choices in <em>Settings → Privacy → Ad Privacy Choices</em>. Declining consent does not necessarily mean no ads will be shown; non-personalized or limited ads may be available where permitted.</p>
+<p>You can also manage your Android advertising ID in the device settings. We do not intentionally transmit your favorites, Khatm, dhikr or worship logs to AdMob for targeting, nor do we build advertising profiles based on your religious practices.</p>
+<h2>7. Permissions</h2>
+<ul>
+<li><strong>Approximate/precise location:</strong> city, Qibla and nearby mosques; optional.</li>
+<li><strong>Notifications:</strong> prayer times and reminders.</li>
+<li><strong>Exact alarms and boot notifications:</strong> schedule reminders and restore them after a device restart.</li>
+<li><strong>Foreground services:</strong> Quran audio playback and ongoing prayer-time/countdown notifications.</li>
+<li><strong>Internet and network state:</strong> access the listed providers and check connectivity.</li>
+<li><strong>Vibration and wake lock:</strong> support notifications and audio playback.</li>
+</ul>
+<h2>8. Retention, backups and deletion</h2>
+<p>Local records are stored as application data on your device. When you confirm <strong>Settings → Privacy → Delete My Data</strong>, the app requests Android's clear-application-data function. This clears the app's private storage, preferences, databases, Khatm and worship records, listening history, Message of the Moment records and caches, and closes the app. On reopening, the initial setup screen appears. This cannot be undone; Android runtime permissions are also reset.</p>
+<p>Alternatively use <em>Android Settings → Apps → GönülVakti → Storage → Clear data</em>. These actions and uninstalling the app do not automatically delete records previously created on independent third-party servers or backup/transfer copies outside the app's local storage.</p>
+<h2>9. Your rights and requests</h2>
+<p>Depending on applicable data protection law (including Türkiye's KVKK), you may have rights to information, access, correction, deletion and objection. Users in the EEA, UK or Switzerland may have additional rights under applicable privacy laws. You can contact us at <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a>. You may need to contact third-party providers separately about information they retain.</p>
+<p>If you email us, your email address and message will be processed through the email service to review and respond to your request. Sending an email does not create an account in the app.</p>
+<h2>10. Children's privacy</h2>
+<p>The app is not specifically designed to target children. Creating an account or entering contact information is not required. The data practices of Google AdMob and other third-party services are described above. Parents or legal guardians may contact us with privacy questions.</p>
+<h2>11. Security</h2>
+<p>The internet services listed above are accessed over HTTPS. Local app data resides in Android's application storage. No technical measure eliminates all risks completely.</p>
+<h2>12. Changes</h2>
+<p>If we revise this policy, the last-updated date on this page will change. Material changes may also be communicated in the app or on this page, as appropriate.</p>
+<h2>13. Contact</h2>
+<p>Developer: Fatih Levent · <a href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a></p>
+
+<footer>GönülVakti · Privacy Policy · November 21, 2026</footer></main>
+<main id="ar" lang="ar" data-language="ar" dir="rtl" hidden>
+<header><h1>سياسة الخصوصية لتطبيق GönülVakti</h1><p class="meta">آخر تحديث: 21 نوفمبر 2026</p><nav class="lang" aria-label="Language / Dil / اللغة"><a href="#tr" hreflang="tr" lang="tr">Türkçe</a> <span aria-hidden="true">·</span> <a href="#en" hreflang="en" lang="en">English</a> <span aria-hidden="true">·</span> <strong aria-current="page">العربية</strong></nav></header>
+
+<div class="summary"><p>باختصار</p><ul>
+<li>لا تحتاج إلى إنشاء حساب. يمكنك كتابة اسم اختياري في الملف الشخصي، ويُعرض حرفه الأول على أيقونة الملف. لا يلزم التسجيل ببريد إلكتروني أو رقم هاتف.</li>
+<li>تُحفظ المفضلات وسجلات الذكر والعبادات وتقدم ختم القرآن وتفضيلات التشغيل محليًا على جهازك. لا نُنشئ ملفًا لحساب المستخدم على خادم خاص بنا.</li>
+<li>إذن الموقع اختياري. وقد تُرسل إحداثيات الموقع إلى خدمات خارجية للحصول على مواقيت الصلاة واتجاه القبلة والمساجد القريبة.</li>
+<li>قد تعالج خدمات MP3Quran والخرائط والموقع وGoogle AdMob بيانات الاتصال التقنية ومعلومات الجهاز.</li>
+<li>يمكنك إعادة تعيين بيانات التطبيق المحلية عبر خيار <strong>«حذف بياناتي»</strong> داخل التطبيق.</li>
+</ul></div>
+<h2>1. من نحن؟</h2>
+<p>GönülVakti تطبيق لنظام Android طوّره Fatih Levent. تشير كلمة «نحن» إلى المطوّر، ويشير «التطبيق» إلى GönülVakti. للاستفسارات المتعلقة بالخصوصية، تواصل عبر <a class="bidi" href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a>.</p>
+<h2>2. المعلومات المخزنة على جهازك</h2>
+<p>تُحفظ المعلومات التالية في مساحة التخزين المحلية للتطبيق. ولا ننشئ لها ملفًا شخصيًا للمستخدم على خادم خاص بنا:</p>
+<ul>
+<li>المدينة المختارة والمدن المحفوظة وبيانات المدينة أو الإحداثيات المرتبطة بالموقع، وتفضيلات اللغة والمظهر وحساب المواقيت والإشعارات.</li>
+<li>اسم اختياري تكتبه في الملف الشخصي (ليظهر حرفه الأول في أيقونة الملف).</li>
+<li>الآيات وغيرها من المحتويات المحفوظة في المفضلة، وآخر موضع قراءة في القرآن.</li>
+<li>عدادات الذكر وسجلها، وسجلات متابعة الصلاة والعبادات اليومية والصلوات الفائتة.</li>
+<li><strong>رحلتي مع ختم القرآن:</strong> الأجزاء المكتملة، وتقدم القراءة، والأهداف والسجل السابق.</li>
+<li>قائمة تشغيل التلاوات وروابط ملفات الصوت وأسماء السور والقراء وآخر عنصر وموضع الاستماع.</li>
+<li>رسائل «رسالة الوقت» المحفوظة وسجل عرضها ومواعيد الإشعارات وتفضيلاتها.</li>
+<li>نسخ مؤقتة لمواقيت الصلاة ونتائج البحث عن المساجد، بما فيها منطقة البحث والإحداثيات والوقت.</li>
+</ul>
+<p>قد تبقى هذه البيانات حتى تحذفها أو تمسح بيانات التطبيق أو تلغي تثبيته. لا تتوفر للمستخدم ميزة نسخ احتياطي أو استعادة داخل التطبيق. يعطّل ملف إعدادات Android النسخ الاحتياطي التلقائي، لكن <strong>نقل البيانات من جهاز إلى آخر</strong> قد يختلف حسب إصدار Android والشركة المصنّعة.</p>
+<h2>3. الموقع الجغرافي</h2>
+<p>قد يطلب التطبيق إذن الموقع التقريبي أو الدقيق. عند الموافقة، يمكن استخدام الموقع لتحديد المدينة والحصول على مواقيت الصلاة وحساب اتجاه القبلة والبحث عن المساجد القريبة. ويُستخدم نظام تحديد الموقع في Android للوصول إلى الموقع.</p>
+<p>لا يطلب التطبيق <strong>إذن الموقع في الخلفية</strong>، ولم يُصمَّم للتتبع المستمر. ومع ذلك، قد تُجرى عمليات شبكة لتحديث المواقيت أو تجهيز نتائج المساجد مسبقًا باستخدام موقع مختار أو جرى الحصول عليه من قبل. يمكنك اختيار المدينة يدويًا بدلًا من منح الإذن، لكن بعض الميزات المعتمدة على الموقع قد تكون محدودة. ويمكن سحب الإذن من إعدادات Android.</p>
+<h2>4. خدمات الجهات الخارجية</h2>
+<p>عند استخدام الميزات ذات الصلة، قد تُرسل طلبات إلى الخدمات التالية. ويمكن لخوادمها الاطلاع على عنوان IP وبيانات الاتصال التقنية. وقد توجد هذه الخوادم خارج تركيا.</p>
+<div class="tablewrap"><table><thead><tr><th>الخدمة</th><th>الغرض</th><th>المعلومات التي قد تُرسل أو تظهر للخدمة</th></tr></thead><tbody>
+<tr><td>Aladhan API<br><span class="bidi">api.aladhan.com</span></td><td>مواقيت الصلاة</td><td>إحداثيات المدينة أو الموقع وطريقة الحساب واختيار وقت العصر وبيانات الطلب وعنوان IP.</td></tr>
+<tr><td>Android Geocoder</td><td>البحث عن المدن وتحديد المدينة من الإحداثيات</td><td>الإحداثيات أو نص البحث، حسب مزود خدمة تحديد العناوين في الجهاز.</td></tr>
+<tr><td>OpenStreetMap Nominatim<br><span class="bidi">nominatim.openstreetmap.org</span></td><td>البحث عن المدن والعناوين والمساجد وتحديد العنوان من الموقع</td><td>الإحداثيات واستعلامات المدن وحدود منطقة البحث وبيانات الاتصال.</td></tr>
+<tr><td>Overpass API<br>(عدة خوادم عامة)</td><td>البحث عن المساجد القريبة</td><td>إحداثيات مركز البحث ونصف القطر والاستعلام وبيانات الاتصال.</td></tr>
+<tr><td>خدمات خرائط OpenStreetMap</td><td>عرض الخريطة والمساجد</td><td>منطقة الخريطة المعروضة وأجزاء الخريطة المطلوبة وبيانات الاتصال، والإحداثيات عند فتح صفحة خريطة.</td></tr>
+<tr><td>MP3Quran<br><span class="bidi">mp3quran.net</span> وخوادم الصوت</td><td>قوائم السور والقراء وبث التلاوات</td><td>القائمة أو الملف الصوتي المطلوب وعنوان IP ومعلومات الاتصال.</td></tr>
+<tr><td>Google AdMob / UMP</td><td>الإعلانات وخيارات الخصوصية والقياس ومنع الاحتيال</td><td>عنوان IP والمعرّف الإعلاني ومعرّفات الجهاز والتفاعلات وبيانات التشخيص ومعالجة خيارات الموافقة حسب الحالة.</td></tr>
+</tbody></table></div>
+<p>إن منح إذن الموقع في Android لا يعني وحده استيفاء جميع المتطلبات القانونية لمعالجة البيانات الشخصية أو نقلها دوليًا. وتظل المعالجة خاضعة للقوانين المعمول بها وسياسات مقدمي الخدمات.</p>
+<h2>5. الاستماع إلى القرآن</h2>
+<p>تأتي معلومات السور والقراء من واجهة MP3Quran البرمجية. وتُبث التلاوات المختارة من خوادم صوتية عبر HTTPS يحددها مزود الخدمة. ويمكن لخادم الصوت الاطلاع على الملف المطلوب وعنوان IP. وتُحفظ قائمة التشغيل وأسماء السور والقراء وآخر موضع استماع على جهازك لتتمكن من المتابعة. ولا ننشئ سجلًا لاستماعك على خادم خاص بنا.</p>
+<h2>6. الإعلانات وخيارات الخصوصية</h2>
+<p>يستخدم التطبيق Google AdMob. وقد تعالج حزمة Google Mobile Ads عنوان IP وتفاعلات المستخدم مع التطبيق وبيانات التشخيص ومعرّفات الجهاز والإعلان لأغراض عرض الإعلانات والقياس والأمان ومنع الاحتيال. ويمكن استنتاج موقع تقريبي من عنوان IP. للمزيد، راجع <a href="https://policies.google.com/privacy" rel="noopener noreferrer">سياسة خصوصية Google</a>.</p>
+<p>في المناطق المعنية، بما فيها المنطقة الاقتصادية الأوروبية والمملكة المتحدة وسويسرا، قد يعرض التطبيق رسالة خصوصية للإعلانات عبر Google User Messaging Platform (UMP). وقد تشمل الخيارات <strong>الموافقة</strong> و<strong>عدم الموافقة</strong> و<strong>إدارة الخيارات</strong>. عندما يقرر UMP أن ذلك مطلوب، يمكنك فتح الخيارات مجددًا من <em>الإعدادات ← الخصوصية ← خيارات خصوصية الإعلانات</em>. ولا يعني رفض الموافقة بالضرورة إيقاف جميع الإعلانات؛ فقد تُعرض إعلانات غير مخصصة أو محدودة حيث يُسمح بذلك.</p>
+<p>يمكنك أيضًا إدارة معرّف الإعلانات في إعدادات Android. ولا نرسل عمدًا المفضلات أو سجلات ختم القرآن أو الذكر أو العبادات إلى AdMob لاستهداف الإعلانات، ولا ننشئ ملفات تعريف إعلانية اعتمادًا على ممارساتك الدينية.</p>
+<h2>7. الأذونات</h2>
+<ul>
+<li><strong>الموقع التقريبي أو الدقيق:</strong> للمدينة والقبلة والمساجد القريبة؛ وهو اختياري.</li>
+<li><strong>الإشعارات:</strong> لمواقيت الصلاة والتذكيرات.</li>
+<li><strong>المنبهات الدقيقة وإشعار بدء التشغيل:</strong> لجدولة التذكيرات وإعادتها بعد إعادة تشغيل الجهاز.</li>
+<li><strong>خدمات المقدمة:</strong> لتشغيل التلاوات وعرض المواقيت والعد التنازلي في شريط الإشعارات.</li>
+<li><strong>الإنترنت وحالة الشبكة:</strong> للاتصال بمقدمي الخدمات والتحقق من الاتصال.</li>
+<li><strong>الاهتزاز وإبقاء الجهاز نشطًا:</strong> لدعم الإشعارات وتشغيل الصوت.</li>
+</ul>
+<h2>8. الاحتفاظ بالبيانات والنسخ الاحتياطي والحذف</h2>
+<p>تُحفظ السجلات المحلية ضمن بيانات التطبيق على جهازك. عند تأكيد <strong>الإعدادات ← الخصوصية ← حذف بياناتي</strong>، يطلب التطبيق من Android مسح بياناته. يمسح ذلك مساحة التخزين الخاصة بالتطبيق والتفضيلات وقواعد البيانات وسجلات ختم القرآن والعبادات وسجل الاستماع ورسائل الوقت والملفات المؤقتة، ثم يُغلق التطبيق. وعند فتحه من جديد، تظهر شاشة الإعداد الأولي. ولا يمكن التراجع عن هذا الإجراء؛ كما تُعاد أذونات Android الممنوحة أثناء التشغيل إلى حالتها الأصلية.</p>
+<p>يمكنك بدلًا من ذلك استخدام <em>إعدادات Android ← التطبيقات ← GönülVakti ← التخزين ← مسح البيانات</em>. ولا تؤدي هذه الإجراءات أو إزالة تثبيت التطبيق تلقائيًا إلى حذف السجلات المحفوظة سابقًا على خوادم جهات خارجية مستقلة أو النسخ الاحتياطية ونسخ النقل الموجودة خارج مساحة تخزين التطبيق.</p>
+<h2>9. حقوقك وطلباتك</h2>
+<p>قد تتمتع، وفقًا لقانون حماية البيانات الشخصية التركي (KVKK) والقوانين الأخرى المعمول بها، بحقوق الاطلاع والوصول والتصحيح والحذف والاعتراض. وقد يتمتع المستخدمون في المنطقة الاقتصادية الأوروبية أو المملكة المتحدة أو سويسرا بحقوق إضافية بموجب قوانين الخصوصية السارية. للتواصل راسل <a class="bidi" href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a>. وقد يلزم التواصل مع مقدمي الخدمات الخارجية بشأن المعلومات التي يحتفظون بها.</p>
+<p>إذا راسلتنا عبر البريد الإلكتروني، فستُعالج رسالة البريد وعنوانك من خلال خدمة البريد للرد على طلبك. ولا يؤدي إرسال بريد إلكتروني إلى إنشاء حساب داخل التطبيق.</p>
+<h2>10. خصوصية الأطفال</h2>
+<p>التطبيق غير مصمم خصيصًا لاستهداف الأطفال. ولا يتطلب إنشاء حساب أو إدخال بيانات اتصال. وقد ورد أعلاه وصف لممارسات معالجة البيانات لدى Google AdMob والخدمات الخارجية الأخرى. ويمكن للوالدين أو الأوصياء القانونيين التواصل معنا بشأن أي استفسارات عن الخصوصية.</p>
+<h2>11. الأمان</h2>
+<p>تُستخدم اتصالات HTTPS للوصول إلى خدمات الإنترنت المذكورة أعلاه. وتُحفظ بيانات التطبيق المحلية في مساحة تخزين تطبيق Android. ومع ذلك، لا يمكن لأي إجراء تقني إزالة جميع المخاطر تمامًا.</p>
+<h2>12. التعديلات</h2>
+<p>إذا عدّلنا هذه السياسة، فسيُحدّث تاريخ آخر تعديل في هذه الصفحة. وقد نبلغ عن التغييرات المهمة داخل التطبيق أو في الصفحة عند الاقتضاء.</p>
+<h2>13. التواصل</h2>
+<p>المطوّر: Fatih Levent · <a class="bidi" href="mailto:nurvakti.destek004@gmail.com">nurvakti.destek004@gmail.com</a></p>
+
+<footer>GönülVakti · سياسة الخصوصية · 21 نوفمبر 2026</footer></main>
+</div>
+<script>
+(function () {
+  'use strict';
+  const languages = ['tr', 'en', 'ar'];
+  const titles = {
+    tr: 'GönülVakti Gizlilik Politikası',
+    en: 'GönülVakti Privacy Policy',
+    ar: 'سياسة الخصوصية لتطبيق GönülVakti'
+  };
+  function updateLanguage() {
+    const selected = window.location.hash.slice(1).toLowerCase();
+    const language = languages.includes(selected) ? selected : 'tr';
+    document.querySelectorAll('main[data-language]').forEach(function (el) {
+      el.hidden = el.dataset.language !== language;
+    });
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+    document.title = titles[language];
+  }
+  window.addEventListener('hashchange', updateLanguage);
+  updateLanguage();
+}());
+</script>
 </body>
 </html>
